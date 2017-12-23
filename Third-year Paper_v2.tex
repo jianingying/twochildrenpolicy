@@ -1,0 +1,1045 @@
+\documentclass[12pt]{extarticle}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[justification=centering]{caption}
+\usepackage{microtype}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{stackengine}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{biblatex}
+\usepackage{indentfirst}
+\usepackage[flushleft]{threeparttable}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{appendix}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+
+\linespread{1.5}
+\setlength\parindent{28pt}
+
+\begin{document}
+\title{Impacts of the Transition from ``One-Child" Policy to ``Two-Children" Policy on Households in China \\  \large \vspace*{1\baselineskip} Third-Year Paper}
+\author{Jianing Ying%
+\thanks{I would like to thank Tom Vogl for advising me on this project. I also want to extend my appreciation to graduate students in the Department of Economics at Princeton who have given me their comments and suggestions.}}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+Since early 21st century, China has gradually transitioned from the ``one-child" policy to the ``two-children" policy in multiple stages. This paper studies the impacts of the expected number of children on household expenditures and savings pattern, and on household members, particularly the first-born child and the wife/mother in the family. While many economists have previously examined the causal relationship between family size and various household outcomes, all prior research focus solely on the actual number of children. Using the variation in households' eligibility of having a second child due to changes in the family planning policy, this study finds evidence that changes in household behavior and female labor supply may take effect even before changes in family size actually occur. The results show that an increase in the expected number of children due to policy changes can increase annual household savings by approximately 30,000 yuan and decrease the probability that the wife/mother is employed by 10 percentage points.
+\end{abstract}
+\thispagestyle{empty}\baselineskip1.08\baselineskip\newpage{}
+
+\pagebreak
+\setcounter{page}{1}
+
+\section{Introduction}
+The impacts of family size on all aspects of household outcomes have long been the focus of social sciences and economics studies. Among all, the most studied relationships are between family size and both child's education outcomes and mother's labor supply choices. In fact, the two effects seem to go hand-in-hand. On the one hand, the resource dilution model posits that parental resources are finite and as the number of children increases, allocated resources including time and energy devotion, and financial endowments from parents to any one child necessarily decline (Blake, 1981; Downey, 1995, 2001). Hence, parents face a trade-off between quantity and quality as they decide the number of children they want to raise (Becker and Lewis, 1973; Becker and Tomes, 1976). On the other hand, a vast majority of empirical studies on fertility and labor supply find a negative correlation between family size and female labor supply (Angrist and Evans, 1998). One explanation is that decrease in female labor supply would increase the total time devoted to children and make at least some children in the family better off (Blau and Grossberg, 1992; Li, Yao, Zhang and Zhou, 2005; Stafford, 1987). Therefore, both sides of the effect have to be examined in order to see a full picture. \\
+\indent A relatively less studied topic, however, is the relationship between household size and household expenditures and savings pattern, even though studies on savings and expenditures in general are extensive. Nevertheless, the household size plays a crucial role in determining the consumption and savings pattern for both individuals in the household and the household as a whole (Browning and Lusardi, 1996; Orbeta, 2006). Most of the existing studies confirm a positive family size effect on consumption expenses and a negative family size effect on savings and (Rehman, Faridi, and Bashir, 2010). As the size of the household grows, income is diverted away from savings and towards expenditures, as every additional member of the household would result in an incremental burden on the current household income level (Dornbusch, Fischer, and Startz, 2004). More explicitly, the impacts of the number of children are found to remove most of the inverted U-shape for consumption over the working life cycle (Blundell, Browning, and Meghir, 1994; Attanasio and Weber, 1995; Attanasio and Browning, 1995; Browning and Ejrnæs, 2009), suggesting that the number of children is the major cause for consumption to vary. \\
+\indent However, there exist limited studies that look at the effects of household size on both aggregate household dynamics such as expenditures and savings and individual outcomes at the same time. And almost all of the past literature are only concerned about the impacts of family size when all of the children are born. Yet thinking of family size prior to births of all children may also provide very interesting stories, in that people may have an expectation for the number of children they would like or are able to have, and make decisions accordingly before actually achieving this goal. Regardless of whether it is an ideal or practical number, the existence of such an expectation can affect how much couples spend and save, how they treat their current child, if any, and whether the wife/mother should stay at home or go to work even before this expectation is actually realized. \\
+\indent This paper hence aims at studying the potential causal relationship between the expected number of children and household expenditures and savings pattern, the outcomes of the first-born and the labor supply choices of the wife/mother in the household. One of the most troublesome issues often faced by researchers when considering expectations is the difficulty in measurement. It is usually hard to tell whether one's expectation has changed, when or why the expectation has changed, and to quantify how much expectation has changed. To deal with this problem, I conduct my study under a special setting in China, as China has recently changed its family planning policy from the ``one-child" policy to the ``two-children" policy. \\
+\indent The ``one-child" policy has been formally implemented in China since 1980s. Because of concerns about the aging population, the ``one-child" policy was gradually abolished in the past decade. Starting from early 2000s, a few provinces began their earliest attempt in experimenting on a conditional ``two-children" policy for couples who themselves were both only children and had no siblings. This first version of ``one-child" policy relaxation was then applied to more and more provinces until November 2011, when it was implemented in all provinces across the nation. In December 2013, the ``two-children" policy was extended also to couples that at least one of them was an only child. Finally in October 2015, the ``two-children" policy was implemented nationwide to all citizens, regardless of husband's and wife's original family compositions. However, due to the limitation of the data, I will only exploit the latter two time points of the policy relaxations for now and view them as exogenous forces in potentially changing the expected number of children for families that are affected by the policy changes. \\
+\indent The fact that the ``one-child" policy has been enforced for such a long period of time makes China a particularly interesting case to study. Since families subject to the ``one-child" policy could give birth to only one child and violation will be penalized, most children born after late 1970s in urban areas have no siblings. This thus cultivates a culture that pays a particular attention to the education of the young generation in every family. Some parents consider their only child as the most important element in life and over-indulge the child; some consider their only child the biggest hope in life and over-burden the child with their own great ambitions. On parents' side, the constantly rising living costs and housing prices in the past decade may make it obligatory for most couples to both stay in the labor force. Hence, these historical and regional reasons may cause effects of the expected number of children on the first-born only child and female labor supply to be ambiguous and different from what is usually concluded in previous studies about other countries. \\
+\indent To facilitate this analysis, I make use of data from the China Family Panel Studies (CFPS). And I utilize a difference-in-difference strategy that compares outcomes of interest (household expenditures and savings, outcomes of the first-born, and labor supply decisions of the wife/mother) for families that are affected by the second and the complete relaxations of the ``one-child" policy (first-difference) before and after the corresponding time point (second-difference) to identify causal effects. \\
+\indent To preview my results, I find that the implementations of the ``two-children" policy do not significantly impact total household expenditures. Among the different categories of expenditures, however, housing expenses seem to decrease significantly by about 4,500-6,000 yuan for families affected by the policy changes. More significant and consistent effects of policy relaxations are observed on total household savings, which increase by an approximate average of 30,000 yuan across specifications. As for the policy impacts on the first-born, I find that neither expenses on the first-born children nor their education outcomes are significantly affected. Finally, the potential increase in the expected number of children resulted from policy relaxations decreases the probability that the wife/mother in the family is employed by around 10 percentage points. \\ 
+\indent This paper provides novel evidence on how expected family size may affect household expenditures and savings and outcomes of family members in less developed countries. It has advantages over past studies in that the transition from the ``one-child" policy to the ``two-children" policy in China provides a unique source of exogenous variation in both family size and more essentially to this study, expected family size. In addition, the analysis evaluates the causal effects of an increase in the expected number of children from one to two on numerous household outcomes, whereas past researches have mostly been limited to studying the effect of increasing quantity of children in larger households with two or more children already. The results may also help to understand the divergence of family size effects across countries. Most importantly, it may offer insight to policy-makers in especially developing countries about the impacts of changes in policies that target at controlling the population. \\
+\indent The remainder of the paper is organized as follows. In the next section, I expand on the literature and policy background related to the question being investigated. Section 3 presents the conceptual framework and the motivating model. Section 4 describes the data. Section 5 presents the research design and identification strategy. Section 6 shows and interprets the empirical results. Section 7 provides concluding remarks.
+
+\section{Background}
+\subsection{Literature Review}
+The influential model of Becker and Lewis (1960), which suggests that children can be treated as analogous to consumer durables, built the foundation of the theory of fertility choices. Becker and Lewis (1973) further sharpened the focus on the quantity-quality trade-off by arguing that even if the quantity and quality of child enter separately in the parental utility function, they are still closely connected. That is, if child quality increases, then spending per child increases, making the increase in quantity while holding quality constant more expensive. Conversely, if child quantity increases, then the marginal cost of increasing quality with respect to family size also increases. Hence, the negative correlation between quantity and quality of child is generated from the budget constraint of every household. \\
+\indent Empirically, the challenge for testing the effect of quantity of children on the quality of children and all kinds of other outcome variables has been to find sources of exogenous variations in family size. The endogeneity issue lies in the heterogeneity of parents, causing omitted variables bias. That is, the correlation between quantity and quality may be driven by parental preferences instead of family sizes. For instance, if parents who value quality more prefer to have fewer children, then the ordinary least squares (OLS) estimate of the family size effect on child's education will be downward biased (overestimated if the effect is negative). Similarly, if parents who have fewer children regard parental care as an essential form of education investment, then OLS produces upward biased estimate of the family size effect on female labor force participation (underestimated if the effect is negative). \\
+\indent Past studies attempt to overcome this issue by using exogenous increase in family size induced by the birth of twins or the sex composition of the first two children \footnote{The logic in using the sex composition of the first two children is that families are less likely to have a third child if they already have a son and a daughter.}. Some of these approaches suggest that a negative correlation between family size and the education attainment of children exists (Booth and Kee, 2009; Rosenzweig and Wolpin, 1980a; Rosenzweig and Zhang, 2009), while others show no evidence of a quantity-quality trade-off (Angrist, Lavy and Schlosser, 2010) or that family size effect is reduced to almost zero if indicators of birth order are included (Black, Devereux and Salvanes, 2005). However, most of the existing studies have not distinguished between the effects of increasing family size from one to two and increasing a marginal child for households that are already large, which are likely different. In fact, Black, Devereaux and Salanes (2004) and Iacavou (2001) show that while the conventional negative correlation between quantity and quality holds for households of two or more children, children with no siblings do worse than children with one or two siblings. Focusing only on one-child families in rural areas in China, Qian (2009) also finds that an additional child has a significant positive effect on school enrollment of the first-born. \\
+\indent Furthermore, the empirical results have not been consistent across countries and sometimes even for the same country across different data sets, generating external validity issues. In particular, negative effect of family size on child's education has been found using data from the U.S. (Berhman, Pollak and Taubman, 1989; Conley, 2004; Stafford 1987), France (Goux and Maurin, 2004), Britain (Booth and Kee, 2009), Korea (Lee, 2008), India (Rosenzweig and Wolpin, 1980a), Brazil (Ponczek and Souza, 2012), Vietnam (Dang and Rogers, 2016) and China (Li, Zhang and Zhu, 2008; Rosenzweig and Zhang, 2009), while no effect or positive effect has been found in Israel (Angrist, Lavy and Schlosser, 2010), Norway (Black, Devereux and Salvanes, 2005) and China (Guo and Vanwey, 1999; Qian, 2009), and different effects across cohorts have been found in Indonesia (Maralani, 2008). \\
+\indent Two possible channels that act against the conventional quantity-quality trade-off following the increase in quantity of children is 1) change in mother's labor supply decision, 2) change in household expenditures and savings pattern to ensure that quality of current child is not negatively affected by the increase in quantity. The second channel can be focal when parents have low elasticity between child quantity and quality, which is likely the case in urban families in China. \\
+\indent As for 1), the effect of family size on mother's labor supply decisions is found to be more consistent across past literature than that on child's education outcomes. Most past studies conclude a negative effect of increasing number of children on female labor supply (Angrist and Evans, 1998). Nevertheless, Rosenzweig and Wolpin (1980b) shows that initial withdrawal from labor market is only transient, and finds lifetime labor supply to be unaffected by the increase in family size resulted from the birth of twins. Karbownik and Myck (2012) suggests that the negative effect of an additional child on the employment of the mother only exists for families with low fertility rates, and there is no effect for families with already two or more children. In China, however, the negative effect of additional children on female labor supply may be mitigated by childcare provided by grandparents to support working parents (Li, Yi and Zhang, 2015). \\
+\indent As for 2), most literature reaches the agreement unanimously that an increase in family size would result in an increased propensity to consume and a decreased propensity to save (Kelley, 1988), especially in developed countries. Kiran and Dhawan (2015) corroborates this consensus by investigating the effect of family size on monthly savings and consumption expenditure within industrial workforce. Harris, Loundes, and Webster (1999) using Australian data, and Smith and Ward (1980) using US data find the impact of number of children on household savings to be negative as well. However, studies done in developing countries have shown more mixed results (Mason, 1988). Orbeta (2006) observes negative effect of family size on savings in Philippines, whereas results are more complicated to interpret in for instance, Korea (Hong, Sung, and Kim, 2002), Indonesia (Kelly and Williamson, 1968), Thailand (Kleinbaum and Mason, 1987) and South American countries (Musgrove, 1978). \\
+\indent This study, however, differs from the past literature in that it attempts to look at all three aspects of the household, namely, outcomes on the first-born, female labor supply decisions and household expenditures and savings. In addition, it examines the effects of expected number of children instead of actual number of children, which is rarely studied before. Furthermore, it focuses mainly on the effects of increasing the number of children from one to two, which is more relevant today because more people desire to have a smaller family size. This paper is also different from the most relevant past analysis by Qian (2009) in that it exploits the transition from the old family planning policy to the new one instead of variations across rural regions and times in the actual enforcement of the ``one-child" policy. Moreover, this study targets not only at rural households, but include both urban and rural households in the sample, which may lead to more interesting implications. Overall, this paper may add new evidence to existing literature and help to explain some of the discrepancies in past results from the perspective of differential policy-induced cultural backgrounds.
+
+\subsection{Family Planning Policy Background in China} \label{policybackground}
+Until the 1960s, families in China were explicitly encouraged to have as many children as possible because of Mao Zedong's belief that population growth empowered the country. The population grew from 540 million in 1949 to 940 million in 1976. Beginning in 1970s, policies promoting later marriages, longer spacing between births and a fewer number of children came out. The global debate over a possible overpopulation catastrophe at the time also motivated the Chinese government to prepare a plan of reducing China's population to the desired level by 2080, with the ``one-child" policy applied to Han ethnicity (which comprises 92\% of the population) as the main instrument. Hence, the ``one-child" policy was officially announced in 1979, while actual implementation began in certain regions as early as 1978. The enforcement was then tightened across the country and was firmly in place by 1980. \\
+\indent In 1984, ``Document 7" was issued to grant provincial governments the flexibility to make exceptions and allow a second child in the case of ``practical difficulties"\footnote{Examples of practical difficulties include cases in which the father is disabled, or works in a dangerous industry such as mining.}. Since then, local governments were responsible for both maintaining low fertility rates and decreasing forced abortion rates. The main relaxation following ``Document 7" is the permission for families in rural areas to have a second child if the first child is a girl. In fact, the ``one-child" policy has mostly only been strictly enforced in densely populated urban areas, whereas the enforcement was far less stringent for rural residents. This phenomenon is also partly due to the difficulty to administer registration and inspection work in rural areas and to effectively punish rural residents. In rural areas, families were usually allowed to have more than one child even without incurring penalties. \\
+\indent As the generation born under the ``one-child" policy in China came to an age for formation of the next generation, each only child would be left with a huge burden of providing support for two parents and four grandparents. In response to this foreseeable heavy burden and the persisting concerns about the aging population and the declining proportion of population in labor force, starting from early 21st century, the strict ``one-child" policy started to transform into a conditional ``two-children" policy. The first version of conditional ``two-children" policy allows families in which both parents were only children to have a total of two children, and its actual implementation date varied by provinces. Each province also constructed their own regulations on certain other conditions to satisfy for being eligible to have a second child. For example, some provinces require a time spacing of at least four years between the birth of the first and second child. Finally in November 2011, the last province, Henan, announced their decision to relax the ``one-child" policy for parents who both have no siblings. This relaxation mainly applied to urban parents, since there were much fewer only-child families in rural regions due to long-standing exceptions in the implementation of the ``one-child" policy anyways. \\
+\indent In December 2013, the policy was further relaxed to allow families to have two children as long as at least one parent in the family was an only child. Nevertheless, eligible couples still have to submit an application before having a second child. Table \ref{tab:implementdates} lists the implementation dates of this second version of conditional ``two-children" policy for all 22 regular provinces, 4 municipalities directly under central government (Tianjin, Beijing, Shanghai and Chongqing), and 3 autonomous regions (Guangxi, Ningxia and Mongolia) in mainland China. Information on 2 other autonomous regions, namely, Tibet and Xinjiang, are not provided, as a majority of residents in these two regions are associated with minority ethnicity groups and are never subject to the ``one-child" policy. As seen from the table, all provinces have finished implementing the second version of conditional ``two-children" policy by early June. The ``one-child" policy was completely replaced by an unconditional ``two-children" policy nationwide in October 2015, and this complete relaxation that allows all families to have two children was put in practice immediately in the beginning of 2016 in all provinces. Throughout the paper, I will use two groups of concepts interchangeably according to the context: 1) second version of conditional ``two-children" policy and 2014 relaxation of ``one-child" policy, and 2) unconditional ``two-children" policy and complete (2016) relaxation of ``one-child" policy.
+
+\section{Conceptual Framework}
+Although this paper is mainly interested in studying the effects of the \textit{expected} number of children on various household and individual outcomes, I will set up my conceptual framework as if I were considering the actual number of children. This will help build a theoretical standpoint for the proceeding empirical analyses, and it does not contradict with my focus on the expected number of children because when a household is expecting more children, they will likely plan in advance and take actions ahead of the birth or even the pregnancy of more children so as to prepare for the arrival of additional family members in the near future. \\
+\indent The simple model used in this study is derived from Qian (2009). It is a combination of the classic quantity-quality trade-off model (Becker 1960; Becker and Lewis, 1973; Becker and Tomes, 1976) and the ``confluence model" established in psychology studies, which argues that older children in the family can benefit from the interaction with younger siblings through, for example, tutoring them. \\
+\indent Let the utility of a household be a function 
+$$U(n,\{q_i\}_{i=1}^{n},y)$$
+where $n$ denotes the number of children it has, $\{q_i\}_{i=1}^{n}$ the set of quality choices for each child $i$, and $y$ the aggregate amount of all other commodities. By ``quality choices", I acknowledge that this ``quality" is only partially controlled by the household through expenditures on child's education (including both financial endowments and parental care) due to differences in inherited ability, luck, etc. Notice that I consider parental care also a form of physical education investment, since the time and effort cost of providing children with parental care can be viewed as the opportunity cost of spending the time and effort not on work or other income generating activities. \\
+\indent Assume the quality of a child is determined by a function of the form 
+$$q_i = g(w_i,e_i,n)$$ 
+where $w_i$ is the parental contribution and $e_i$ is the endowed contribution to the quality of child $i$. Assume that the inherent inputs, $e_i$, is exogenously determined and is independent of parental inputs, $w_i$, then without loss of generality, I can define the cost function of educating a child of quality $q_i$ for a family with $n$ children as $c(q_i,n)$. The household's budget constraint is then 
+$$\sum_{i=1}^{n}c(q_i,n)+p_{y}y \leq I$$ 
+where $I$ is the household's income and $p_y$ is the aggregate price level of $y$. \\
+\indent In the classic model, it is assumed that the cost of education is increasing in quality, i.e., $c_{q}(q_i,n) > 0$, and the rate of increase is non-negative, i.e., $c_{qq}(q_i,n) \geq 0$. Additionally, I assume that $c(q_i,n+1)-c(q_i,n) \leq 0$, which implies that having an additional child may lower the average cost of education per child. This assumption is motivated by the observation that transferring education resources within a household is often cheaper than in the market. For example, the older child can tutor and share books with the younger child. Note that derivative cannot work here because $n$ is discontinuous and only takes on discrete integer values. Thus, the constrained maximization problem faced by the household is 
+$$\mathcal{L}=\max_{n,\{q_i\}_{i=1}^{n},y}\quad {U(n,\{q_i\}_{i=1}^{n},y)+\lambda[I-\sum_{i=1}^{n}c(q_i,n)-p_{y}y]}$$ 
+\indent For simplicity, I consider only symmetric equilibrium, where the quality choices should be the same for each child $i$ in the household. Denote the equilibrium quantity, quality, and consumption of other commodities as $n^{*}$, $q^{*}$, and $y^{*}$, respectively. Then the first-order conditions are given by
+$$U(n^{*}+1,\{q^{*}\}_{i=1}^{n^{*}+1},y)-U(n^{*},\{q^{*}\}_{i=1}^{n^{*}},y) = \lambda((n^{*}+1)c(q^{*},n^{*}+1)-n^{*}c(q^{*},n^{*}))$$
+$$\frac{\partial U}{\partial q^{*}} = \lambda n^{*}c_{q}(q^{*},n^{*})$$
+$$\frac{\partial U}{\partial y^{*}} = \lambda p_{y}$$ 
+Hence, the ratio of the marginal utility from quantity to the marginal utility from quality is
+$$\frac{{MU}_{n^{*}}}{{MU}_{q^{*}}}=\frac{(n^{*}+1)c(q^{*},n^{*}+1)-n^{*}c(q^{*},n^{*})}{n^{*}c_{q}(q^{*},n^{*})}$$ 
+where the denominator is the additional cost of increasing the quality of all $n^{*}$ children in the household, and the numerator is the net cost of educating one more child up to the equilibrium quality. \\
+\indent Therefore, under this framework, it is not certain that there must be a trade-off between quality and quantity. Given another extra assumption that $c_{q}(q,n+1)-c_{q}(q,n) \leq 0$, it implies that having an additional child lowers not only the average but also the marginal cost of increasing quality. Then the negative correlation between quantity and quality only exists if the total marginal cost of increasing child quality for all children is increasing with the quantity of children:
+$$(n^{*}+1)c_{q}(q^{*},n^{*}+1)-n^{*}c_{q}(q^{*},n^{*}) > 0$$
+which can be rewritten as
+$$-n^{*}(c_{q}(q^{*},n^{*}+1)-c_{q}(q^{*},n^{*})) < c_{q}(q^{*},n^{*}+1)$$
+The left-hand side of the inequality is the amount saved from an additional birth of child on the marginal cost of increasing quality for current children, and the right-hand side is the marginal cost of increasing quality for the additional child. Hence, there is a trade-off between quantity and quality if savings gained from increasing quantity is less than the cost. Conversely, if this inequality does not hold, then there will be no trade-off, as the household can increase quantity and quality simultaneously without violating the budget constraint. \\
+\indent Another case when there may not exist any observable trade-off between quantity and quality occurs if parents have low elasticity between quantity and quality. That is, the number of children would not affect the quality of children greatly, as parents prefer non-decreasing quality of children. Theoretically, such families will then make decisions according to a constrained maximization problem with two constraints: the budget constraint and the additional constraint on child's quality. That is, parents do not ``freely" choose the quality of their children, but want to ensure that the quality does not decline for current children when they give birth to additional ones. They optimize the quality of their children only after this requirement is met. This may be realized by cutting down expenditures on other goods, $y$. In the case of the \textit{expected} number of children, this decrease in expenditures on other goods would then imply an increase in savings for future investments on the additional child. It is reasonable to expect such assumption to hold for my sample, considering the relatively small family sizes and the cultural background.
+
+\section{Data}
+\subsection{Data Set Description}
+This paper makes use of the China Family Panel Studies (CFPS) data\footnote{See http://www.isss.edu.cn/cfps/EN/.}, which is a nationally representative, longitudinal survey of Chinese communities, families, and individuals, including both adults and children. After two trial surveys in 2008 and 2009, the CFPS is officially launched in 2010 by the Institute of Social Science Survey (ISSS) of Peking University and is funded by the Chinese government through Peking University. It is designed to collect individual-, family-, and community-level longitudinal data in contemporary China. All targeted families, including all family members at the time of survey and future lineal or adopted members, that participated in the baseline survey in 2010 will be permanently tracked since then. The CFPS focuses on the economic, as well as the non-economic, well-being of the Chinese population, with a sample covering 25 provinces and 16,000 families. The survey topics range from economic activities, education outcomes, family dynamics and relationships, to migration and health. \\
+\indent The CFPS survey releases data biennially and currently provides data for 2010, 2012, 2014 and 2016 waves of survey. Each wave of survey would take about one entire year to interview and collect data, with the 2010 wave running from April 2010 to March 2011, the 2012 wave from July 2012 to March 2013, the 2014 wave from August 2014 to June 2015, and the latest 2016 wave from May 2016 to April 2017. The two time points of policy changes that are of interest to me in this study are the announcements of the second version of conditional ``two-children" policy at the end of 2013 and the unconditional ``two-children" policy in late 2015. As described in Section \ref{policybackground} and Table \ref{tab:implementdates}, Henan was the last province that implemented the second version of conditional ``two-children" policy in June 3, 2014. Since the earliest survey takers of the 2014 wave of survey were in August, the 2014 relaxation should apply to all survey respondents of the last two waves of survey (2014 and 2016). Similarly, since all provinces fully liberalized the old family planning policy and transformed into the unconditional ``two-children" policy to allow for two children per family in early 2016, all survey respondents of the last wave of survey (2016) are subject to the complete relaxation. \\
+\indent The announcement of the first version of conditional ``two-children" policy is not used because different provinces implemented it at different times in a 10-year time span under different regulations so that information on the number of parents' siblings alone does not determine eligibility. Furthermore, seeing that ``one-child" policy was relaxed for couples without siblings in some provinces may be enough to change the expectation towards the number of children for families residing in provinces that have not yet implemented the first version of conditional ``two-children" policy, as they would expect a future relaxation as well. Hence, it is hard to determine one single time point, during which expectations changed, even within a province. \\
+\indent In each wave of the survey, the CFPS data contains four data sets: community, family, adult, and child, where family data set contains detailed information about household expenditures and savings. For each individual in the survey, a personal ID and a family ID are assigned. Hence, I can match together the adult and child data sets that belong to the same family using family ID \footnote{Readers interested in more details on matching of the data sets should refer to Appendix \ref{matching}.}. Married couples without children are also matched together in the adult data sets, as couples do not need to have children in order to be affected by the policy relaxations. The reasoning comes in the idea that even for married couples who do not have child yet, their expectations of the number of children may increase from one to two after the policy relaxations, which may then be reflected in their expenditures and savings behavior and female labor supply choices. \\
+\indent The sample of interest is restricted to households in which husbands and wives are still married and wives are younger than 50 years old, assuming that giving birth to an additional child is impossible for families with wives older than 50. That is, the policy relaxations would be irrelevant to them, no matter whether they are eligible or not based on sibling requirement. Table \ref{tab:sumstats1} reports means and standard errors of relevant household variables for this study, whereas Table \ref{tab:sumstats2} reports the same summary statistics for individual characteristics \footnote{Details on how some of the variables in Table \ref{tab:sumstats2} are coded can be found in Appendix \ref{coding}.}. As observed from Table \ref{tab:sumstats1}, approximately 5\% of the households in the sample are affected by the 2014 relaxation, while 20\% are affected by the complete relaxation. A little less than half of the sample are urban households, and the average number of children at the time of survey is between one and two. Household income, expenditures and savings almost all experience an increasing trend over four waves of survey, except for entertainment expenses, which have declined as compared to 2010. And among the consumption categories I examine, food expenses take up the highest fraction of total household expenditure.
+
+\subsection{Treatment \& Control Groups}
+The gradual process of transforming from the ``one-child" policy to ``two-children" policy separates the sample into three groups as illustrated in detail below. Notice that the three groups should be mutually exclusive and together, they make up the full sample. \\
+\indent 1) The control group: families that satisfy one of the followings -- (i) already eligible for a second child after the first version of conditional ``two-children" policy as both parents have no siblings, (ii) already have more than one child, or (iii) reside in rural areas. \\
+\indent 2) The 2014 treatment group: urban families in which exactly one parent was an only child and have at most one child by the time of the 2010 survey \footnote{The reason of using the number of children by the time of the 2010 survey instead of the current survey is due to the concern that the current number of children may be endogenous to policy relaxations. Hence, I take the number of children at the first wave of CFPS survey, which is before the 2014 and 2016 relaxations, as an instrument for actual number of children at the time of policy changes. The number of children at 2010, sibling information of couples and urban residence would thus jointly determine the treatment status of the family. I acknowledge that this may increase the noises in the estimated treatment dummies.}, and thus are eligible for two children after the implementation of the second version of conditional ``two-children" policy in 2014. \\
+\indent 3) The 2016 treatment group: urban families in which neither parent was an only child and have at most one child by the time of 2010 survey, and thus are not eligible to have two children until the implementation of the unconditional ``two-children" policy in 2016. \\
+\indent A comparison between the two treatment groups and the control group across the four waves of survey is provided in Table \ref{tab:sumstats_comp}, where sample is restricted to urban households, as it is the main focus of this study. Notice that total household income, expenditures and savings have been increasing for all three groups over years, except for a small dip on total household expenditures in 2014 for the 2014 treatment group. Particularly, total household savings nearly tripled from 2010 to 2012 for all three groups. After 2012, however, household savings rise more steadily over time for the control group, but both treatment groups almost doubled their savings again from 2014 to 2016. Education and medical expenses and class percentile of the first-born, on the other hand, seem to follow similar trends for all groups. Finally, the female employment rate has risen over 60\% from 2010 to 2016 for the control group. While more wives are employed in the two treatment groups than the control group to start with in 2010 and the female employment rate has also been increasing until 2014, it experiences a drop of roughly 2\% in 2016.
+
+\section{Empirical Design}
+I utilize a difference-in-difference specification and compare changes in outcome variables of interest over time for the two treatment groups and the control group. Ideally, the two-stage model in which the treatment status of a family is the instrument for the expected number of children is specified below: 
+\begin{align}
+\begin{split}
+{ExpectNChild}_{itr} = \lambda+\varphi{Treat14}_i+\phi({Treat14}_i \times {Relax14}_t)+\theta{Treat16} \\ +\delta({Treat16}_i \times {Relax16}_t)+\psi_r+\pi_t+\eta_c+X_{itr}^{'}\gamma+u_{itr}
+\end{split}
+\end{align}
+\begin{align}
+y_{itr} = \alpha+\beta{ExpectNChild}_{itr}+\psi_r+\pi_t+\eta_c+X_{itr}^{'}\gamma+\epsilon_{itr}
+\end{align}
+Equation (1) is the first-stage equation, where the expected number of children for family $i$, residing in province $r$, at survey year $t$ is a function of ${Treat14}_i$, a dummy variable indicating whether family $i$ is affected by 2014 policy relaxation, a first interaction term of ${Treat14}_i$ and ${Relax14}_t$, a dummy variable indicating whether the second version of conditional ``two-children" policy is already implemented at survey year $t$, ${Treat16}_i$, a dummy variable indicating whether family $i$ is affected by the complete relaxation, a second interaction term of ${Treat16}_i$ and ${Relax16}_t$, a dummy variable indicating whether the unconditional ``two-children" policy is already implemented at survey year $t$, $\psi_r$, province fixed effects, $\pi_t$, year fixed effects, $\eta_c$, cohort fixed effects, $X_{itr}$, a vector of covariates describing relevant household and individual characteristics at survey year $t$, and $u_{itr}$, an idiosyncratic error term. \\
+\indent Equation (2) is the second-stage main equation, where the outcome variable for family $i$ or the first-born/wife of family $i$, residing in province $r$, at survey year $t$ is a function of ${ExpectNChild}_{itr}$, the expected number of children for family $i$, residing in province $r$, at survey year $t$, $\psi_r$, province fixed effects, $\pi_t$, year fixed effects, $\eta_c$, cohort fixed effects, $X_{itr}$, household and individual characteristics, and $\epsilon_{itr}$, an error term. \\
+\indent The instrumental approach is used because the expected number of children may be endogenously determined. If couples who have a higher discount factor and prefer to consume more and save less also expect to have less children, then a simple OLS estimation will produce a downward biased estimate (an overestimation if the effect is negative) and an upward biased estimate (an overestimation if the effect is positive) for the effect of the expected number of children on household consumption and household savings, respectively. In the story of first-born children, if parents who care about child's education more prefer to have less children or even an only child and dedicate everything to him/her, a simple OLS estimation will produce a downward biased estimate for the effect of expected number of children on the education outcome of the first-born. The possibility of reverse causality may also cause a problem. For instance, if parents expect to have more children when their current child is of a higher quality, then the OLS will produce an upward biased estimate. \\
+\indent In the purpose of my study, I define ``cohorts" as the year of birth cohorts of the wife/mother in the household, as the age of the wife/mother in the household may be correlated with both the independent and dependent variables. Younger wives/mothers may be more likely to be born in small families with fewer or no siblings because their parents are constrained to ``one-child" policy or simply because the general decline in birth rate for the past recent decades. Hence, it is more likely for them to be in the 2014 treatment group and less likely to be in the 2016 treatment group. On the other hand, younger wives/mothers may also have the tendency to spend more on short-run consumption such as clothing and entertainment. If this is the case, then the estimate on the first interaction term would be upward biased and the estimate on the second interaction would be downward biased. Instead of controlling for a full set of year of birth cohorts though, I use age groups, so that observations within each group would still be of a considerable number. \\
+\indent However, there is no direct information on the actual expectation of the number of children a family would like to have in the data set. Hence, to address this issue, I run a reduced-form regression instead:
+\begin{align}
+\begin{split}
+y_{itr} = a+\mu{Treat14}_i+b({Treat14}_i \times {Relax14}_t) +\tau{Treat16}_i \\ +c({Treat16}_i \times {Relax16}_t) +\psi_r+\pi_t+\eta_c+X_{itr}^{'}\gamma+e_{itr}
+\end{split}
+\end{align}
+where the outcome variable for family or the first-born/wife of family $i$, residing in province $r$, at survey year $t$ is a function of ${Treat14}_i$, a dummy variable indicating whether family $i$ is affected by 2014 policy relaxation, a first interaction term of ${Treat14}_i$ and ${Relax14}_t$, a dummy variable indicating whether the second version of conditional ``two-children" policy is already implemented at survey year $t$, ${Treat16}_i$, a dummy variable indicating whether family $i$ is affected by the complete relaxation, a second interaction term of ${Treat16}_i$ and ${Relax16}_t$, a dummy variable indicating whether the unconditional ``two-children" policy is already implemented at survey year $t$, $\psi_r$, province fixed effects, $\pi_t$, survey year fixed effect, $\eta_c$, cohort fixed effect, $X_{itr}$, a vector of covariates describing relevant household and individual characteristics, and $e_{itr}$, an error term. \\
+\indent The reduced-form regression specified in equation (3) can be interpreted in a way that being affected by the policy relaxations induces families to at least take time to think about the possibility of increasing the number of children in the household. No matter whether the actual number of children really changes or not in the end, the expectation of the number of children would at least switch from a strict ``one" to an indeterminate ``two". As long as couples are re-considering the number of children they are expecting to have due to the policy changes, this could potentially lead to observable effects on household expenditures and savings, and  on the first-born and the wife/mother. Among all of the outcomes that I am interested in investigating, changes in household expenditures and savings should be the most immediate as compared to others, and impacts on the first-born and the labor supply decisions of the wife/mother may not be evident so soon. \\
+\indent I test all my specifications with and without covariates to ensure that the obtained results do not rest upon their exclusion or inclusion. If significant results are observed, I further test it using an expanded regression to examine whether the pre-treatment common trend assumption holds: \\
+\begin{align}
+\begin{split}
+y_{itr} = a_{0}+\nu{Treat14}_i+b_{1}({Treat14}_i \times {Wave2012}_t) +b_{2}({Treat14}_i \times {Wave2012}_t)+ \\ b_{3}({Treat14}_i \times {Wave2012}_t)+\kappa{Treat16}_i+c_{1}({Treat16}_i \times {Wave12}_t)+ \\ c_{2}({Treat16}_i \times {Wave14}_t)+c_{3}({Treat16}_i \times {Wave16}_t)+ \\ \psi_r+\pi_t+\eta_c+X_{itr}^{'}\gamma+e_{itr}
+\end{split}
+\end{align}
+
+\section{Results}
+For all tables that follow, I show results in five columns to check whether different sample selections or the inclusion of different sets of covariates would lead to different results. Columns (1)-(3) consider a restricted sample of households residing in urban areas. This is also where the policy relaxations are most effective and relevant, and hence, the main sample of this study. For comparison, column (4) also shows results for the full sample, where households living in rural areas are also included. Column (5) is a further restriction on the sample, in which only urban households with at most one child by the time of the 2010 wave of survey are included. This restriction rules out the possibility that significant differences between rural and urban or initially small and large households may be driving the results that we observe. By leaving out both rural households and households that are large to start with, the only major variation that determines whether a household is in the control, 2014 treatment or 2016 treatment group is whether the husband and wife are also from small families.
+\subsection{The Effects of Policy Relaxations on General Household Expenditures}
+Panel A of Table \ref{tab:totalexp} shows the estimates from equation (3), with annual total household expenditures as the dependent variable. Columns (1) through (3) perform various robustness checks using the sample of urban households. In particular, column (1) controls for province and year fixed effects, column (2) also includes controls for cohort fixed effects and column (3) further includes a set of co-variate dummies considering household and individual characteristics, namely, household income levels and both father's and mother's highest education levels and employment statuses. The estimated coefficients of the first and second interaction term represent the effects of the 2014 and complete relaxations of the ``one-child" policy on affected households, respectively. \\
+\indent Overall, there seems to be no significant effect of policy relaxations on total household expenditures. Table \ref{app:consume} provides more detailed information about the effects on expenditures by breaking down consumption expenditures into different categories. The only significant estimates are associated with the effect of 2014 relaxation on housing expenses and the effect of complete relaxation on daily commodities expenditure. However, when I investigate further using equation (4) for expenditure on daily commodities, the estimates become very noisy. On the other hand, the extended results for housing expenses is presented in Table \ref{app:housing_extend}. Both the 2014 and the 2016 treatment group seem to spend a significantly higher amount than the control group on housing expenses pre-treatment, except when we consider the most restricted sample of urban and small households. As soon as 2014 the policy relaxation is implemented, however, the estimates become negative. Especially in the survey year of 2016, the estimates are negative and statistically significant at the 5\% significance level, with a magnitude of approximately 4,000 yuan. Even though the estimate is statistically insignificant in column (5), it has changed from positive to negative. Therefore, there is some evidence that the 2014 relaxation may have decreased the housing expenses for affected households by about 4,500-6,000 yuan, statistically significant at the 1\% level. There is likely a time lag in reacting to the policy relaxation, which may explain for the insignificant negative estimates on the second interaction term.
+
+\subsection{The Effects of Policy Relaxations on Household Savings}
+Panel B of Table \ref{tab:totalexp} shows the estimates for the effects of policy relaxations on annual total household savings. All of the estimated coefficients of both the first and the second interaction terms show a positive effect of policy relaxations on household savings. The estimates are all statistically significant at at least the 5\% significance level, with the exception in column (5). Extended results are presented in Table \ref{app:savings_extend}, which provides supporting evidence towards the positive effects observed in Table \ref{tab:totalexp}. \\
+\indent Across columns (1)-(4) in Table \ref{app:savings_extend}, all estimates are significantly positive, implying that households in either treatment group have a much faster growing rate of household savings than those in the control group both before and after policy relaxations. The difference in savings trend prior to treatment may be due to the fact that households in the treatment groups are smaller in family size than those in the control group for columns (1)-(3) and for column (4), the difference between urban and rural households further magnifies this. In fact, this logic is consistent with the insignificant estimates in column (5) before policy relaxations, as the difference in trend vanishes when the sample is restricted to urban and small households. After policy relaxations are implemented, the gap between treatment and control groups grows even larger, soaring in the 2016 survey. Even in column (5), the positive estimates become statistically significant at the 5\% and 1\% significance level when the two treatment groups are interacted with the complete relaxation dummy, respectively. Furthermore, the effect of 2014 policy relaxation on household savings for the 2014 treatment group in 2016 is larger than that of complete policy relaxation for the 2016 treatment group in 2016, which is also consistent with the hypothesis that there may exist delay in response to policy changes. \\
+\indent Therefore, it is convincing that implementations of the ``two-children" policy increases total household savings by around 30,000 yuan. This result is robust to the exclusion or inclusion of different sets of controls in the regression or rural households in the sample. When families are expecting an additional child or an increase in family size, they would likely save more in order to support for the future increase in monetary needs.
+
+\subsection{The Effects of Policy Relaxations on First-Born Children}
+The impacts of the ``two-children" policy on first-born children are mainly studied from two aspects of interest, namely, expenditures spent on them and their education outcomes. Sample sizes are smaller when studying outcomes of the first-born, because not all couples already have children by the time of the survey and information about children is sometimes incomplete with missing responses. All of the regressions studying first-born children also include a full set of year of school dummies and control for the gender of the child. As seen from Table \ref{tab:sumstats2}, most first-born children in my sample are relatively young, averaging at the age of 10 and fifth grade in primary school. This fact makes my attempt to analyze child's education outcomes more meaningful, as education outcomes or test scores of younger children tend to be more susceptible to parents' monetary (education expenses) and time (care and attention) investment. \\
+\indent Table \ref{tab:childexp} illustrates whether parents change the amount of money they spend on their first-born child. I look at three outcome variables related to child's expenses, including annual total education expenses, medical expenses, and medical insurance expenses. There are no significant effects found throughout the table, suggesting that parents do not exploit from current children to invest in the additional child. \\
+\indent Table \ref{tab:childeduc} presents the estimates for the effects of the ``two-children" policy changes on education outcomes of the first-born, where dependent variables are total class percentiles according to the last exam, grade in the last Chinese exam, and grade in the last math exam. All estimates are statistically insignificant across Panels A, B, and C of Table \ref{tab:childeduc}. There exists three possible explanations for the null results. First, the sample size may not be big enough to observe a meaningful result. Second, since the information on class percentiles and grades in Chinese and math all depends on the last exam taken by the child, one exam may not reveal as much. Moreover, because of the design of the survey questions, none of the three outcome variables are actually in continuous numerical values. As described in Appendix \ref{coding}, class percentiles are only separated into five categories and grades in Chinese and math into four. Since the outcome variables can only be categorical numbers in a limited set of choices, it may be difficult to observe changes, even if there are any. Third, time may be too short to observe any effects yet on the education outcomes of the first-born even if parents who are affected by the policy relaxations have changed their behavior (for example, they may spend less time caring about the education of the first-born). \\
+\indent To think more carefully about why we do not observe any significant effects of policy relaxations on education outcomes of the first-born, I also present the effects of the ``two-children" policy on mental outcomes of first-born children and parents' behavior towards them in Appendix Tables \ref{app:childmental} and \ref{app:parentatt}, respectively. In particular, I use two variables to account for the state of mental health of the first-born child: 1) whether one has positive feeling about oneself, and 2) a subjective well-being measure, both scaled from 1 to 5. The only significant estimates are observed in columns (1)-(3) of Panel B in Appendix Table \ref{app:childmental} at the 5\% significance level, when the 2016 treatment group is interacted with the complete relaxation dummy for the urban sample. These estimates suggest that the implementations of the ``two-children" policy may increase the happiness level of the first-born by 0.3 units. Similarly, the two variables of choice describing how much attention parents pay to the first-born are 1) the degree that parents care about child's education, and 2) active communication between parents and the child. Again, no significant results are found except in columns (4) and (5) of Panel A in Appendix Table \ref{app:parentatt} at the 10\% and 5\% significance levels, respectively, when the 2014 treatment group is interacted with the 2014 relaxation dummy for the full sample and the most restricted sample consisting of only urban and small households. The two significant estimates suggest that being affected by the ``two-children" policy may decrease the degree at which parents care about the education of the first-born by 0.2 units. \\
+\indent The potential positive effect of the ``two-children" policy on the subjective well-being measure and the negative effect on how much parents care about the education of the first-born, if real, together may fit in a cultural story that the only child in one-child families in China are currently over-burdened by the high expectations and excessive attention from parents. However, judging from the results observed in the tables, it is more likely that the estimates may simply be noisy.
+
+\subsection{The Effects of Policy Relaxations on Female Labor Supply}
+Table \ref{tab:mhasjob} illustrates whether there is an impact of the ``two-children" policy changes on the employment status of the wife/mother in the family. All estimates across columns (1)-(4) suggest that there is a significant negative effect of both policy relaxations on the probability that the wives of affected families are employed, and almost all of them are statistically significant at the 1\% significance level. However, the estimates lose significance as soon as the comparison is made between treatment and control groups within the sample of urban households that are also small. \\
+\indent Hence, I investigate further with the expanded regression equation (4) and the results are shown in Appendix Table \ref{app:mhasjob_extend}. When both the 2014 and 2016 treatment groups are interacted with the 2012 survey year dummy, estimates are statistically insignificant across all five columns, implying that the pre-treatment trends are similar for the treatment and control groups. When both treatment groups are interacted with the 2014 or 2016 survey year dummy, however, most estimates become significantly negative in columns (1)-(4), and the magnitudes of the estimates in each column are uniformly larger when interacted with the 2016 than the 2014 survey year dummy. Although all estimates in column (5) are statistically insignificant, the estimates are observed to change from insignificantly positive to insignificantly negative when the complete relaxation takes place in 2016. In addition, that the estimates turn statistically negative even when interacted with the 2014 survey year dummy for the 2016 treatment group may indicate that seeing the 2014 relaxation may already alter their expectations for family size, as they may expect the implementation of a complete policy relaxation coming soon. \\
+\indent Therefore, I conclude that in my sample, the potential increase in the expected number of children due to ``one-child" policy relaxations is likely to decrease the probability for the wife/mother in the family to be employed by approximately 10 percentage points. This result is consistent with most of the past literature on the causal relationship between female labor supply and the actual family size. It may also act as one of the mechanisms underlying the null effects observed on education outcomes for the first-born, as leaving the labor force could mean more time available for the current child. Although it is not apparent from the two proxies for parents' attention in Table \ref{app:parentatt} that parental care has increased, children may still value the time parents spent at home. Hence, having mother simply being around more may compensate for any negative effects of resource dilution resulted from policy relaxations, leaving the first-born unaffected overall. On the other hand, if there is really an increase in the happiness measure of the first-born, it may be caused by changes in female labor supply instead of the reduction in burden and stress.
+
+\section{Conclusion}
+This paper estimates the effects of expected number of children on household expenditures and savings pattern, outcomes of the first-born, and the labor supply decisions of the wife/mother. It resolves the problem that expectations are usually impossible to determine using the transition from ``one-child" policy to ``two-children" policy in China. I exploit the plausibly exogenous variation in the expected number of children induced by the 2014 conditional relaxation and the 2016 complete relaxation of the ``one-child" policy to show evidence that an increase in the expected number of children lead to a potential decrease in housing expenditure of the household, an increase in the total household savings, and a decrease in the labor force participation of the wife/mother. The various outcomes of the first-born, and the education and medical expenses parents spend on the first-born, however, do not seem to be significantly affected. \\
+\indent My empirical results add new perspective to thinking about family size and the driving forces behind its effects on the household. It may be unnecessary for changes in family size to actually occur in order for changes in household behavior to take effect. Changes in savings are especially rapid in responding to any potential changes in the expectation of future family size in comparison with changes in other outcomes. Nevertheless, these results do not necessarily imply long-run effects. In fact, they are likely transitory. Hence, taking the results to the long-term environment requires great caution. \\
+\indent It is currently beyond the scope of this paper to offer conclusive evidence on the channels through which the main effects occur. The null effects of policy relaxations on the education outcomes of the first-born may be the joint effect of the conventional quantity-quality trade-off theory and the decrease in labor force participation of the mother. Or they may constitute suggestive evidences that quantity-quality trade-off are only of concern when the number of children is really increased, that is, when a second child is really born to compete resources with the first-born. Since education outcomes are usually hard to observe within a short time frame after immediate policy changes, conclusions can only be drawn after further tests of the effects of the ``two-children" policy when it is implemented for a longer time. In general, whether I can extend these results to other countries remain in question. Therefore, one needs to be particularly careful if these results are interpreted outside of the policy and cultural context of China. \\
+\indent An avenue for future research is to include the first version of conditional ``two-children" policy in the study as well, using provincial variations in the implementation dates and specific regulations to investigate the causal relationship between family size and various outcomes of the household and household members. It would also be a fruitful area for future research to test the effects of the actual number of children on the household when the complete relaxation of ``one-child" policy is in place for more years and affected households have already successfully given birth to an additional child if they indeed decide to have a second child. In this way, I will be able to estimate the first stage, and as much more households are affected by the complete relaxation than the first two versions of conditional relaxations, it may lead to more significant results.
+
+\pagebreak
+% References
+\begin{thebibliography}{50}
+\bibitem{}
+Angrist, J. D., \& Evans, W. N. (1998). ``Children and Their Parents’ Labor Supply: Evidence from Exogenous Variation in Family Size." \textit{The American Economic Review}, 88(3): 450-477.
+\bibitem{}
+Angrist, J. D., Lavy V., \& Schlosser A. (2010). ``Multiple Experiments for the Causal Link between the Quantity and Quality of Children." \textit{Journal of Labor Economics}, 28(4): 773-823.
+\bibitem{}
+Attanasio, O. P., \& Browning, M. (1995). ``Consumption Over the Life Cycle and Over the Business Cycle." \textit{American Economic Review}, 85(5): 1118–1137.
+\bibitem{}
+Attanasio, O. P., \& Weber, G. (1995). ``Is Consumption Growth Consistent with Intertemporal Optimisation? Evidence from the Consumer Expenditure Survey. \textit{Journal of Political Economy}, 103(6): 1121–1157.
+\bibitem{}
+Becker, G. S. (1960). ``An Economic Analysis of Fertility." National Bureau of Economic Research. \textit{Demographic and Economic Change in Developed Countries}. New York, NY: Columbia University Press.
+\bibitem{}
+Becker, G. S., \& Lewis, H. G. (1973). ``On the Interaction Between the Quantity and Quality of Children." \textit\textit{Journal of Political Economy,} 81(2): S279-S288.
+\bibitem{}
+Becker, G. S., \& Tomes, N. (1976). ``Child Endowments and the Quantity and Quality of Children." \textit{Journal of Political Economy}, 84(2): S143-S162.
+\bibitem{}
+Berhman, J., Pollak, R. A., \& Taubman P. (1989). ``Family Resources, Family Size, and Access to Financing for College Education." \textit{Journal of Political Economy}, 97(2): 389-419.
+\bibitem{}
+Black, S. E., Devereux, P. J., \& Salvanes, K. G. (2005). ``The More the Merrier? The Effect of Family Size and Birth Order on Children’s Education." \textit{Quarterly Journal of Economics}, 120(2): 669-700.
+\bibitem{}
+Blau, F. D., \& Grossberg, A. J. (1992). ``Maternal Labor Supply and Children’s Cognitive Development." \textit{The Review of Economics and Statistics}, 74(3), 474-481.
+\bibitem{}
+Blundell, R., Browning M., \& Meghir, C. (1994). ``Consumer Demand and the Lifetime Allocation of Consumption." \textit{Review of Economic Studies}, 61(1): 57–80.
+\bibitem{}
+Booth, A. L., \& Kee, H. J. (2009). ``Birth Order Matters: The Effect of Family Size and Birth Order on Educational Attainment." \textit{Journal of Population Economics}, 22(2): 367-397.
+\bibitem{}
+Browning, M., \& Ejrnæs, M. (2009). ``Consumption and Children." \textit{The Review of Economics and Statistics}, 91(1): 93–111.
+\bibitem{}
+Browning, M., \& Lusardi, A. (1996). ``Household Saving: Micro Theories and Micro Facts." \textit{Journal of Economic Literature}, 34(4): 1797-1855. 
+\bibitem{}
+Conley, D., \& Glauber, R. (2006). ``Parental Educational Investment and Children’s Academic Risk: Estimates of the Impact of Sibship Size and Birth Order from Exogenous Variation in Fertility." \textit{The Journal of Human Resources}, 41(4): 722-737.
+\bibitem{}
+Dang, H., \& Rogers, F. H. (2016). ``The Decision to Invest in Child Quality over Quantity: Household Size and Household Investment in Education in Vietnam." \textit{World Bank Econ Rev}, 30(1): 104-142.
+\bibitem{}
+Deaton, A., \& Paxson, C. (1998). ``Economies of Scale, Household Size, and the Demand for Food.” \textit{Journal of Political Economy}, 106(5): 897-930. 
+\bibitem{}
+Dornbusch, R., Fischer, S., \& Startz, R. (2004). \textit{Macroeconomics.} New Delhi: The McGraw-Hill Company. 
+\bibitem{}
+Downey, D. B. (1995). ``When Bigger Is Not Better: Family Size, Parental Resources, and Children’s Educational Performance." \textit{American Sociological Review}, 60(5): 746-761.
+\bibitem{}
+Downey, D. B. (2001). ``Number of Siblings and Intellectual Development: The Resource Dilution Explanation." \textit{American Psychologist}, 56(6-7): 497-504.
+\bibitem{}
+Goux, D., \& Maurin, E. (2005). ``The Effects of Overcrowded Housing on Children’s Performance at School." \textit{Journal of Public Economics}, 89(5-6): 797-819.
+\bibitem{}
+Hanushek, E. A. (1992). ``The Trade-off between Child Quantity and Quality." \textit{The Journal of Political Economy}, 100(1): 84-117.
+\bibitem{}
+Harris, M., Loundes, J., \& Webster, E. (1999). ``Determinants of household saving in Australia." \textit{The Economic Record}, 78(241): 207-223.
+\bibitem{}
+Hong, G. S., Sung, J., \& Kim, S. M. (2002). ``Saving Behavior Among Korean Households." \textit{Family and Consumer Sciences Research Journal}, 30(4): 437-462.
+\bibitem{}
+Karbownik, K., \& Myck, M. (2012). ``For Some Mothers More than Others: How Children Matter for Labor Market Outcomes When Both Fertility and Female Employment are Low." \textit{DIW Berlin Discussion Papers No. 1208}.
+\bibitem{}
+Kelly, A. C. (1988). ``Population Pressures, Saving, and Investment in the Third World: Some Puzzles." \textit{Economic Development and Cultural Change}, 36(3): 449-464.
+\bibitem{}
+Kelley, A. C., \& Williamson, J. G. (1968). ``Household Saving Behavior in the Developing Economies: The Indonesian Case." \textit{Economic Development and Cultural Change}, 16(3): 385-403.
+\bibitem{}
+Kiran, T., \& Dhawan, S. (2015). ``The Impact of Family Size on Savings and Consumption Expenditure of Industrial Workers: A Cross-Sectional Study." \textit{American Journal of Economics and Business Administration}, 7(4):  177-184.
+\bibitem{}
+Kleinbaum, R., \& Mason, A. (1987). ``Aggregate Projections of Household Consumption in Korean and Thailand." Paper presented at the Annual Meeting of the Population Association of America, 2 May, Chicago.
+\bibitem{}
+Lee, J. (2008). ``Sibling Size and Investment in Children’s Education: An Asian Instrument." \textit{Journal of Population Economics}, 21(4): 855-875.
+\bibitem{}
+Li, H., Yao, X., Zhang, J., \& Zhou, L. (2005). ``Parental Childcare and Children’s Educational Attainment: Evidence from China." \textit{Applied Economics}, 37, 2067-2076.
+\bibitem{}
+Li, H., Yi, J., \& Zhang, J. (2015). ``Fertility, Household Structure, and Parental Labor Supply: Evidence from Rural China." \textit{IZA Discussion Papers No. 9342}.
+\bibitem{}
+Li, H., Zhang, J., \& Zhu, Y. (2008). ``The Quantity-Quality Tradeoff of Children in a Developing Country: Identification Using Chinese Twins." \textit{Demography}, 45(1): 223-243.
+\bibitem{}
+Maralani, V. (2008). ``The Changing Relationship Between Family Size and Educational Attainment Over the Course of Socioeconomic Development: Evidence from Indonesia." \textit{Demography}, 45(3): 693-717.
+\bibitem{}
+Mason, A. (1988). ``Saving, Economic Growth and Demographic Change." \textit{Population and Development Review}, 14(1): 113-144.
+\bibitem{}
+Musgrove, P. (1978). ``Determinants of Urban Household Consumption in Latin America: A Summary of Evidence from the ECIEL Surveys." \textit{Economic Development and Cultural Changes}, 26(3): 441-466.
+\bibitem{}
+Orbeta, A. C. (2006). ``Children and Household Savings in the Philippines." \textit{Philippine Institute for Development Studies}, 32(2). 
+\bibitem{}
+Ponczek, V., \& Souza, A. P. (2012). ``New Evidence of the Causal Effect of Family Size on Child Quality in a Developing Country." \textit{The Journal of Human Resources}, 47(1): 64-106.
+\bibitem{}
+Qian, N. (2009). ``Quantity-Quality and the One Child Policy: The Positive Effect of Family Size on School Enrollment in Rural China." \textit{NBER Working Paper}.
+\bibitem{}
+Rehman, H., Bashir, F., \& Faridi, M. Z. (2010). ``Households Saving Behaviour in Pakistan: A Case of Multan District" \textit{Pakistan Journal of Social Sciences}, 30(1): 17-29. 
+\bibitem{}
+Rosenzweig, M. R., \& Zhang J. (2009). ``Do Population Control Policies Induce More Human Capital Investment? Twins, Birth Weight and China’s ‘One-Child’ Policy." \textit{The Review of Economic Studies}, 76(3): 1149-1174.
+\bibitem{}
+Rosenzweig, M. R., \& Wolpin, K. I. (1980a). ``Testing the Quantity-Quality Model of Fertility: The Use of Twins as a Natural Experiment." \textit{Econometrica}, 48(1): 227-240.
+\bibitem{}
+Rosenzweig, M. R., \& Wolpin, K. I. (1980b). ``Life-Cycle Labor Supply and Fertility: Causal Inferences from Household Models." \textit{Journal of Political Economy}, 88(2): 328-348.
+\bibitem{}
+Stafford, F. P. (1987). ``Women’s Work, Sibling Competition, and Children’s School Performance." \textit{The American Economic Review}, 77(5): 972-980.
+\bibitem{}
+Smith, J., \& Ward, M. (1980). ``Asset Accumulation and Family Size." \textit{Demography}, 17(3): 243-260.
+\bibitem{}
+Zajonc, R. B., \& Markus, G. B. (1975). ``Birth Order and Intellectual Development." \textit{Psychological Review}, 82(1): 74-88.
+\end{thebibliography}
+\pagebreak
+
+%% Tables and Figures
+% 2014 Policy Relaxation Implementation Dates
+\begin{table}
+\centering
+\caption{The Implementation Dates of ``Two-Children" \\ Policy Relaxation in 2014 across Provinces} \label{tab:implementdates}
+\begin{threeparttable}
+\begin{tabular}{l*{3}{c}}
+\hline
+\textbf{Provinces} & & & \textbf{Implementation Dates} \\
+\hline
+Zhejiang & & & January 17 \\
+Jiangxi & & & January 18 \\
+Anhui & & & January 23 \\
+Tianjin & & & February 14 \\
+Beijing & & & February 21 \\
+Guangxi & & & March 1 \\
+Shanghai & & & March 1 \\
+Shaanxi & & & March 1 \\
+Sichuan & & & March 20 \\
+Chongqing & & & March 26 \\
+Gansu & & & March 26 \\
+Liaoning & & & March 27 \\
+Hubei & & & March 27 \\
+Guangdong & & & March 27 \\
+Qinghai & & & March 27 \\
+Jilin & & & March 28 \\
+Jiangsu & & & March 28 \\
+Hunan & & & March 28 \\
+Yunan & & & March 28 \\
+Fujian & & & March 29 \\
+Mongolia & & & March 31 \\
+Heilongjiang & & & April 22 \\
+Guizhou & & & May 17 \\
+Ningxia & & & May 28 \\
+Shanxi & & & May 29 \\
+Hebei & & & May 30 \\
+Shandong & & & May 30 \\
+Hainan & & & June 1 \\
+Henan & & & June 3 \\
+\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} Baidu Online. \\
+\end{tablenotes}
+\end{threeparttable}                  
+\end{table}
+
+% Summary Statistics -- Household
+\begin{table}
+\centering
+\caption{Summary Statistics -- Household Characteristics} \label{tab:sumstats1}
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{5}{c}{\textbf{Wave of Survey}}                                         \\
+\cline{2-6}
+                    &        2010&        2012&        2014&        2016&       Total\\
+\hline
+Control Group       &       0.661&       0.681&       0.621&       0.680&       0.660\\
+                    &   (0.00710)&   (0.00828)&   (0.00885)&   (0.00976)&   (0.00417)\\
+[1em]
+2014 Treatment Group&      0.0529&      0.0464&      0.0386&      0.0451&      0.0466\\
+                    &   (0.00336)&   (0.00374)&   (0.00351)&   (0.00434)&   (0.00185)\\
+[1em]
+2016 Treatment Group&       0.286&       0.269&       0.149&       0.269&       0.247\\
+                    &   (0.00678)&   (0.00788)&   (0.00649)&   (0.00927)&   (0.00380)\\
+[1em]
+Urban               &       0.490&       0.476&       0.452&       0.487&       0.479\\
+                    &   (0.00750)&   (0.00890)&    (0.0112)&    (0.0105)&   (0.00459)\\
+[1em]
+Number of Children  &       1.537&       1.629&       1.698&       1.704&       1.627\\
+                    &    (0.0104)&    (0.0127)&    (0.0138)&    (0.0162)&   (0.00645)\\
+[1em]
+Total Household Income&     36420.3&     50016.1&     59133.1&     66430.5&     50277.4\\
+                    &     (911.6)&    (1097.5)&    (2203.6)&    (2743.1)&     (824.8)\\
+[1em]
+Total Household Savings&     10482.4&     32444.0&     37074.2&     55247.9&     29696.0\\
+                    &     (570.2)&    (1461.0)&    (1628.0)&    (3111.5)&     (782.8)\\
+\hline                   
+Total Household Expenditures&     36541.6&     51448.8&     65238.1&     78856.4&     55105.2\\
+                    &     (599.4)&    (1165.7)&    (2119.2)&    (2263.6)&     (769.8)\\                    
+[1em]
+Food                &     10087.7&     17640.8&     17456.3&     19288.4&     15359.3\\
+                    &     (134.3)&     (298.6)&     (260.2)&     (358.8)&     (128.8)\\
+[1em]
+Clothing            &      1539.5&      2415.3&      2803.0&      3042.9&      2316.1\\
+                    &     (32.96)&     (81.12)&     (61.30)&     (77.91)&     (30.80)\\
+[1em]
+Housing             &      1782.9&      2635.9&      9559.6&     10094.3&      5269.0\\
+                    &     (107.8)&     (59.67)&     (571.1)&     (574.5)&     (174.8)\\
+[1em]
+Daily Commodities   &      3719.1&      7966.4&      7756.0&     11983.2&      7183.2\\
+                    &     (152.4)&     (511.2)&     (512.7)&     (873.5)&     (240.6)\\
+[1em]
+Medical Care        &      3438.6&      3194.0&      4169.7&      4846.4&      3801.0\\
+                    &     (138.2)&     (172.7)&     (208.1)&     (258.1)&     (92.46)\\
+[1em]
+Entertainment       &       484.7&       239.5&       199.6&       233.4&       314.2\\
+                    &     (37.06)&     (20.56)&     (23.64)&     (13.39)&     (15.06)\\
+\hline
+Observations        &        4441&        3170&        3008&        2286&      12905\\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Note:} Sample is restricted to households with the wife/mother younger than 50 years old.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Summary Statistics -- Individual
+\begin{table}
+\fontsize{10}{11}\selectfont
+\centering
+\caption{Summary Statistics -- Individual Characteristics} \label{tab:sumstats2}
+\begin{threeparttable}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{5}{c}{\textbf{Wave of Survey}}                                         \\
+\cline{2-6}
+                    &        2010&        2012&        2014&        2016&       Total\\
+\hline
+\textbf{Adult} \\
+Husband's Age       &       37.99&       39.16&       40.84&       42.38&       39.72\\
+                    &     (0.109)&     (0.123)&     (0.119)&     (0.126)&    (0.0615)\\
+[1em]
+Wife's Age          &       36.03&       37.27&       38.92&       40.37&       37.78\\
+                    &     (0.106)&     (0.119)&     (0.115)&     (0.122)&    (0.0598)\\
+[1em]
+Husband's Education &       2.932&       2.826&       2.814&       2.816&       2.858\\
+                    &    (0.0182)&    (0.0220)&    (0.0221)&    (0.0260)&    (0.0108)\\
+[1em]
+Husband's Employment&       0.747&       0.771&       0.915&       0.906&       0.820\\
+                    &   (0.00660)&   (0.00746)&   (0.00518)&   (0.00612)&   (0.00341)\\
+[1em]
+Wife's Education    &       2.665&       2.578&       2.550&       2.556&       2.597\\
+                    &    (0.0190)&    (0.0227)&    (0.0229)&    (0.0264)&    (0.0111)\\
+[1em]
+Wife's Employment   &       0.577&       0.638&       0.792&       0.791&       0.680\\
+                    &   (0.00753)&   (0.00854)&   (0.00752)&   (0.00851)&   (0.00414)\\
+\hline
+
+\textbf{Child} \\
+Male                &       0.507&       0.512&       0.513&       0.528&       0.513\\
+                    &   (0.00938)&    (0.0104)&    (0.0112)&    (0.0142)&   (0.00545)\\
+[1em]
+Age                 &       8.274&       9.393&       10.23&       10.61&       9.395\\
+                    &    (0.0849)&    (0.0810)&    (0.0757)&    (0.0915)&    (0.0439)\\
+[1em]
+Year of School      &       4.851&       5.170&       5.333&       5.233&       5.131\\
+                    &    (0.0602)&    (0.0640)&    (0.0636)&    (0.0770)&    (0.0328)\\
+[1em]
+Grade in Chinese    &       2.817&       2.786&       2.876&       2.775&       2.817\\
+                    &    (0.0225)&    (0.0236)&    (0.0238)&    (0.0299)&    (0.0123)\\
+[1em]
+Grade in Math       &       2.804&       2.803&       2.834&       2.784&       2.808\\
+                    &    (0.0239)&    (0.0257)&    (0.0263)&    (0.0319)&    (0.0133)\\
+[1em]
+rankClass           &       3.405&       3.741&       3.675&       3.699&       3.646\\
+                    &    (0.0471)&    (0.0419)&    (0.0381)&    (0.0460)&    (0.0216)\\
+[1em]
+Care about Child's Education&       3.497&       3.640&       3.759&       3.731&       3.629\\
+                    &    (0.0144)&    (0.0156)&    (0.0193)&    (0.0273)&   (0.00894)\\
+[1em]
+Communication Between Parents and Child&       3.671&       3.663&       3.862&       3.878&       3.740\\
+                    &    (0.0128)&    (0.0155)&    (0.0185)&    (0.0256)&   (0.00840)\\
+[1em]
+Positive Feeling about Self&       3.633&       3.862&       3.811&       3.885&       3.819\\
+                    &    (0.0578)&    (0.0298)&    (0.0325)&    (0.0473)&    (0.0191)\\
+[1em]
+Child Happiness     &       4.252&       4.134&       4.408&       4.374&       4.272\\
+                    &    (0.0228)&    (0.0292)&    (0.0243)&    (0.0562)&    (0.0143)\\
+[1em]
+Child's Education Expense&      1554.2&      3035.7&      4528.1&      2879.7&      2877.7\\
+                    &     (58.23)&     (108.5)&     (141.0)&     (142.4)&     (55.24)\\
+[1em]
+Child's Medical Expense&      1069.9&      1097.2&       727.7&       762.7&       912.0\\
+                    &     (142.0)&     (85.48)&     (57.69)&     (84.50)&     (51.76)\\
+[1em]
+Child's Medical Insurance&       352.1&       203.2&       239.6&      1905.5&       319.6\\
+                    &     (56.35)&     (20.58)&     (29.32)&     (229.0)&     (25.32)\\
+\hline
+Observations        &        4441&        3170&        3008&        2286&      12905\\      
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Note:} Sample is restricted to households with the wife/mother younger than 50 years old.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Summary Statistics -- Treatment vs. Control
+\begin{landscape}
+\begin{table}
+\fontsize{10}{11}\selectfont
+\centering
+\caption{Summary Statistics -- Comparison between Treatment \& Control Groups} \label{tab:sumstats_comp}
+\begin{threeparttable}
+\begin{tabular}{l*{12}{c}}
+\hline\hline
+                    &\multicolumn{4}{c}{Control}&\multicolumn{4}{c}{2014 Treatment}&\multicolumn{4}{c}{2016 Treatment}\\
+\cmidrule(lr{.75em}){2-5}
+\cmidrule(lr{.75em}){6-9}
+\cmidrule(lr{.75em}){10-13}                  
+                    &        2010&        2012&        2014&        2016&        2010&        2012&        2014&        2016&        2010&        2012&        2014&        2016\\
+\hline
+Number of Children  &       2.042&       2.116&       2.118&       2.173&           1&       1.041&       1.078&       1.107&           1&       1.070&       1.228&       1.164\\
+                    &    (0.0224)&    (0.0249)&    (0.0322)&    (0.0330)&         (0)&    (0.0213)&    (0.0249)&    (0.0363)&         (0)&   (0.00907)&    (0.0211)&    (0.0162)\\
+[1em]
+Household Income&     37285.6&     49399.7&     51647.5&     67298.6&     66702.1&     82224.8&     90759.2&    104476.2&     47292.3&     65675.1&     79829.4&     91319.3\\
+                    &    (1660.1)&    (3140.2)&    (2674.9)&    (6375.1)&    (4055.2)&    (6297.5)&   (14712.2)&    (9265.0)&    (1592.5)&    (2624.6)&    (6631.5)&    (8054.2)\\
+[1em]                    
+Household Expenditures&     39754.7&     51182.5&     62029.9&     84396.3&     52391.9&     93695.3&     81753.1&    115597.4&     44379.3&     65987.7&     83101.5&    102865.6\\
+                    &    (1619.4)&    (3278.7)&    (3559.2)&    (6214.4)&    (2999.2)&   (11373.0)&    (7624.8)&   (16233.7)&    (1200.0)&    (2455.1)&    (4567.5)&    (5838.9)\\
+[1em]
+Household Savings&     10701.8&     31035.8&       32850&     44072.3&     16259.6&     63628.0&     67582.4&    110876.3&     18641.6&     50733.0&     57599.0&     95480.9\\
+                    &    (1121.8)&    (3294.8)&    (3701.8)&    (5667.4)&    (2967.3)&   (11398.2)&   (13267.8)&   (18937.4)&    (1712.5)&    (3407.8)&    (5559.4)&    (9631.8)\\
+[1em]
+Child's Education Expense&      1545.5&      2616.8&      3776.0&      2342.8&      3260.1&      5573.0&      7297.2&      6162.9&      2463.2&      5278.0&      6915.1&      4622.5\\
+                    &     (135.0)&     (232.2)&     (273.6)&     (223.3)&     (377.9)&     (604.3)&     (694.3)&    (1117.0)&     (142.9)&     (346.2)&     (427.7)&     (539.5)\\
+[1em]
+Child's Medical Expense&      1271.4&       883.5&       591.0&       549.5&      1296.5&      1728.7&       907.0&       697.4&      1126.5&      1259.1&       780.8&       909.8\\
+                    &     (572.9)&     (186.8)&     (125.4)&     (88.40)&     (240.9)&     (230.6)&     (152.1)&     (173.1)&     (154.3)&     (167.9)&     (106.0)&     (276.9)\\
+[1em]
+Child's Class Percentile    &       3.513&       3.667&       3.553&       3.571&       3.462&       4.286&       3.872&       3.833&       3.433&       3.799&       3.692&       3.681\\
+                    &     (0.122)&    (0.0927)&    (0.0907)&    (0.0901)&     (0.402)&     (0.220)&     (0.138)&     (0.209)&    (0.0784)&    (0.0819)&    (0.0810)&     (0.113)\\                    
+[1em]
+Wife's Age          &       37.32&       38.92&       38.47&       41.56&       32.80&       33.97&       34.06&       37.39&       36.97&       37.91&       35.73&       40.66\\
+                    &     (0.259)&     (0.279)&     (0.297)&     (0.273)&     (0.421)&     (0.469)&     (0.376)&     (0.428)&     (0.195)&     (0.223)&     (0.231)&     (0.228)\\
+[1em]                    
+Wife's Employment   &       0.474&       0.543&       0.774&       0.776&       0.687&       0.741&       0.796&       0.786&       0.601&       0.689&       0.760&       0.749\\
+                    &    (0.0196)&    (0.0223)&    (0.0233)&    (0.0212)&    (0.0306)&    (0.0362)&    (0.0380)&    (0.0406)&    (0.0138)&    (0.0159)&    (0.0203)&    (0.0175)\\
+\hline
+Observations        &        669&        501&         330&        388&        235&        147&         116&        103&        1270&        853&         448&        614\\    
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Note:} Sample is restricted to \textit{urban} households with the wife/mother younger than 50 years old. The \textit{control} group includes households in which both husband and wife have no siblings or already have more than one child in 2010. The \textit{2014 treatment} group includes households in which exactly one of husband or wife has no siblings and have at most one child in 2010. The \textit{2016 treatment} group includes households in which both husband and wife have siblings and have at most one child in 2010.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\end{landscape}
+
+% Total Expenditures & Savings
+\begin{table}
+\centering
+\caption{The Impacts of "Two-Children" Policy on \\ Total Household Expenditures \& Savings} \label{tab:totalexp}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+\textbf{A. Total Expenditures}\\
+Treat 2014 $\times$ &   -4329.106   &   -4949.683   &   -9029.268   &    -418.951   &   -13300.22   \\
+\quad 2014 Relaxation     &  (9862.721)   &   (9900.75)   &  (9489.908)   &  (9453.447)   &  (9026.299)   \\
+Treat 2016 $\times$ &    3927.453   &    3902.771   &    601.1356   &    12323.95** &   -4729.028   \\
+\quad Complete Relaxation &  (8491.667)   &  (8363.564)   &  (8107.239)   &  (6159.937)   &  (13906.56)   \\
+Observations        &        5258   &        5258   &        5186   &       10786   &        3619   \\
+
+\textbf{B. Total Savings}\\
+Treat 2014 $\times$ &    27758.27** &    24847.62** &    23770.85** &    30834.23***&    14443.41   \\
+\quad 2014 Relaxation     &  (11889.74)   &  (11834.67)   &  (11564.89)   &   (11561.8)   &  (12509.92)   \\
+Treat 2016 $\times$ &    30650.16***&     30430.5***&    27860.15***&     33637.5***&    13389.02   \\
+\quad Complete Relaxation &  (11072.44)   &  (11005.63)   &  (10647.57)   &  (9587.286)   &  (18228.94)   \\
+Observations        &        5483   &        5483   &        5399   &       11259   &        3754   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Expenditure on First-born
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on \\ Household Expenditures Related to the First-Born} \label{tab:childexp}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+\textbf{A. Education Expense} \\
+Treat 2014 $\times$ &    111.3552   &    27.51593   &    52.19069   &     146.546   &   -409.7167   \\
+\quad 2014 Relaxation     &  (858.3916)   &  (862.8942)   &  (838.7147)   &  (799.2107)   &  (1019.187)   \\
+Treat 2016 $\times$ &   -301.4649   &   -352.6591   &   -417.7733   &   -681.3403   &   -77.12652   \\
+\quad Complete Relaxation &  (551.3704)   &  (569.3887)   &  (564.9005)   &  (494.6715)   &  (999.8364)   \\
+Observations        &        2565   &        2565   &        2526   &        5539   &        1590   \\
+\textbf{B. Medical Expense}\\
+Treat 2014 $\times$ &   -138.7145   &   -146.3193   &   -211.4907   &   -321.2759   &   -61.97617   \\
+\quad 2014 Relaxation     &  (471.0875)   &  (464.9672)   &  (457.7149)   &  (432.8785)   &  (469.6291)   \\
+Treat 2016 $\times$ &    409.7028   &    447.0003   &    383.7856   &    296.4374   &    539.2215   \\
+\quad Complete Relaxation &  (462.7155)   &  (483.0613)   &  (475.2457)   &  (391.4896)   &   (496.993)   \\
+Observations        &        2174   &        2174   &        2143   &        4511   &        1399   \\
+
+\textbf{C. Medical Insurance} \\
+Treat 2014 $\times$ &   -401.1465   &   -408.0824   &   -507.3571   &   -358.6378   &   -498.5046   \\
+\quad 2014 Relaxation     &  (293.8456)   &  (298.2142)   &  (312.4564)   &   (298.727)   &  (340.3494)   \\
+Treat 2016 $\times$ &    165.1599   &    164.4008   &    268.3015   &    473.9558   &    208.7059   \\
+\quad Complete Relaxation &  (711.3699)   &    (707.12)   &    (706.27)   &  (662.1346)   &  (840.6286)   \\
+Observations        &        2288   &        2288   &        2254   &        4815   &        1461   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old and at least one child. All regressions include a full set of year of school dummies and control for the gender of the child. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Education Outcomes of First-Born
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on \\ Education Outcomes of the First-Born} \label{tab:childeduc}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+
+\textbf{A. Class Percentiles} \\
+Treat 2014 $\times$ &   -.0630438   &   -.0696774   &   -.0391899   &   -.1595457   &   -.0282597   \\
+\quad 2014 Relaxation     &   (.242712)   &  (.2419763)   &  (.2388227)   &   (.226954)   &  (.2601206)   \\
+Treat 2016 $\times$ &    .0160467   &    .0136253   &    .0089749   &   -.0799772   &    .1126505   \\
+\quad Complete Relaxation &  (.1553074)   &  (.1566385)   &  (.1576866)   &  (.1345626)   &   (.253675)   \\
+Observations        &        1304   &        1304   &        1291   &        2724   &         791   \\
+
+\textbf{B. Grade in Chinese} \\
+Treat 2014 $\times$ &   -.0562376   &   -.0572053   &   -.0645267   &   -.1422898   &    .0438833   \\
+\quad 2014 Relaxation     &  (.1066309)   &  (.1068206)   &  (.1052939)   &  (.1010076)   &  (.1141648)   \\
+Treat 2016 $\times$ &    .0418808   &    .0446722   &    .0433505   &   -.0512708   &    .2066169   \\
+\quad Complete Relaxation &  (.0924995)   &  (.0927496)   &  (.0911787)   &  (.0744006)   &  (.1429932)   \\
+Observations        &        2711   &        2711   &        2671   &        5723   &        1705   \\
+                   
+\textbf{C. Grade in Math} \\
+Treat 2014 $\times$ &   -.0177393   &   -.0144791   &    .0013368   &   -.0878331   &    .0974564   \\
+\quad 2014 Relaxation     &  (.1110285)   &  (.1111664)   &  (.1080436)   &  (.1031311)   &  (.1240681)   \\
+Treat 2016 $\times$ &    .1165122   &    .1246977   &    .1249653   &    .0301248   &    .2792062*  \\
+\quad Complete Relaxation &  (.0996281)   &  (.0998548)   &  (.0975565)   &  (.0789124)   &   (.153024)   \\
+Observations        &        2712   &        2712   &        2672   &        5723   &        1706   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old and at least one child. All regressions include a full set of year of school dummies and control for the gender of the child. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Mother's Employment Status
+\begin{landscape}
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on \\ Female Labor Supply} \label{tab:mhasjob}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+Treat 2014 $\times$ &   -.1238492***&   -.1415107***&   -.1011602***&   -.0833976** &   -.0158539   \\
+\quad 2014 Relaxation     &  (.0394283)   &  (.0393582)   &  (.0383559)   &  (.0366776)   &   (.044843)   \\
+Treat 2016 $\times$ &   -.1195011***&   -.1223437***&   -.0992026***&   -.0676474***&    .0150687   \\
+\quad Complete Relaxation &  (.0299943)   &  (.0300069)   &  (.0297527)   &  (.0229494)   &  (.0521663)   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Husband's Education &  N &  N & Y & Y & Y \\
+\quad Self Education &  N &  N & Y & Y & Y \\
+\quad Husband's Employment &  N &  N & Y & Y & Y \\
+\hline
+Observations        &        5618   &        5618   &        5587   &       11585   &        3905   \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\end{landscape}
+
+\clearpage
+\appendix
+\appendixpage
+\makeatletter
+\def\@seccntformat#1{\csname named#1\endcsname\csname the#1\endcsname.\quad}
+\makeatother
+\newcommand{\namedsection}{Appendix }
+
+\setcounter{figure}{0}
+\renewcommand{\figurename}{Appendix Figure}
+\setcounter{table}{0}
+\renewcommand{\tablename}{Appendix Table}
+
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\section{Additional Tables}
+% Total Savings_Extend
+\begin{table}[h]
+\centering
+\caption{The Impacts of "Two-Children" Policy on Total Household Savings (Extension)} \label{app:savings_extend}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+\textbf{Total Savings}		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+Treat 2014 $\times$ &    26374.99** &     24723.1** &    26942.69** &     33881.3***&    7282.384   \\
+\quad 2012 Survey         &  (11618.95)   &  (11672.47)   &  (11613.34)   &  (11219.94)   &  (18992.79)   \\
+Treat 2014 $\times$ &    29820.31** &    27829.02** &     30735.8** &    36796.07***&    3377.312   \\
+\quad 2014 Survey         &  (13280.97)   &  (13305.44)   &  (13005.39)   &  (12678.52)   &  (18232.82)   \\
+Treat 2014 $\times$ &    58953.79***&    54111.93***&    49313.54***&     57731.1***&    45883.69** \\
+\quad 2016 Survey         &  (18699.48)   &  (18660.38)   &  (18172.91)   &  (17778.38)   &  (23086.43)   \\
+Treat 2016 $\times$ &     10051.3** &    10068.93** &        6242   &    13584.82***&   -14410.57   \\
+\quad 2012 Survey         &  (4996.398)   &  (5014.012)   &    (4958.3)   &  (3839.482)   &  (15932.81)   \\
+Treat 2016 $\times$ &    15787.71** &    16161.68** &    13663.77** &    19558.67***&   -14445.88   \\
+\quad 2014 Survey         &  (6832.712)   &  (6858.801)   &  (6768.077)   &  (5740.722)   &  (14840.94)   \\
+Treat 2016 $\times$ &    41821.61***&    41298.12***&    35898.49***&    42752.48***&    31044.96*  \\
+\quad 2016 Survey         &   (10976.6)   &  (10953.94)   &   (10516.3)   &  (9522.621)   &  (18295.48)   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline
+Observations        &        5483   &        5483   &        5399   &       11259   &        3754   \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Female Labor Supply_Extension
+\begin{table}[h]
+\centering
+\caption{The Impacts of "Two-Children" Policy on Female Labor Supply \\ (Extension)} \label{app:mhasjob_extend}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+\textbf{Total Savings}		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+Treat 2014 $\times$ &   -.0085868   &   -.0185902   &    -.008131   &     .001796   &    .0019159   \\
+\quad 2012 Survey         &  (.0549211)   &  (.0549509)   &  (.0501489)   &  (.0441662)   &  (.0984048)   \\
+Treat 2014 $\times$ &   -.1796056***&   -.1916762***&   -.1379453** &   -.0642054   &    .0448552   \\
+\quad 2014 Survey         &  (.0565705)   &  (.0563064)   &  (.0545324)   &  (.0492146)   &  (.0994581)   \\
+Treat 2014 $\times$ &   -.1976649***&   -.2265838***&   -.1765444***&   -.1236843** &   -.0694598   \\
+\quad 2016 Survey         &  (.0572558)   &   (.057468)   &  (.0568836)   &  (.0523013)   &  (.1044099)   \\
+Treat 2016 $\times$ &    .0235747   &      .02462   &    .0176043   &     .031335   &    .0325183   \\
+\quad 2012 Survey         &  (.0357163)   &  (.0357679)   &   (.033099)   &  (.0226593)   &  (.0910777)   \\
+Treat 2016 $\times$ &   -.1474645***&   -.1406048***&   -.1224347***&   -.0473722*  &    .0630776   \\
+\quad 2014 Survey         &  (.0381384)   &  (.0381589)   &   (.036937)   &  (.0269896)   &  (.0914535)   \\
+Treat 2016 $\times$ &   -.1540027***&   -.1570099***&    -.131732***&   -.0686219***&   -.0147251   \\
+\quad 2016 Survey         &   (.036101)   &  (.0361782)   &   (.035416)   &  (.0257294)   &  (.0954928)   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline
+Observations        &        5618   &        5618   &        5587   &       11585   &        3905   \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Consumption Expenditures
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on Consumption Expenditures} \label{app:consume}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+		&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+		&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+\textbf{Consumption}		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+
+\textbf{Food} \\
+Treat 2014 $\times$ &    1862.292   &    2067.343   &    1720.533   &    5852.186***&   -225.1984   \\
+\quad 2014 Relaxation     &  (1402.013)   &  (1414.617)   &  (1413.492)   &   (1321.97)   &  (1616.692)   \\
+Treat 2016 $\times$ &   -57.70392   &   -58.11468   &   -580.6314   &     3339.32***&   -3382.587*  \\
+\quad Complete Relaxation &  (1108.251)   &   (1107.32)   &  (1069.772)   &  (744.9784)   &  (1984.749)   \\
+
+
+\textbf{Clothing} \\
+Treat 2014 $\times$ &   -65.34919   &    -123.709   &   -229.3395   &   -41.24217   &   -876.2811*  \\
+\quad 2014 Relaxation     &  (402.5934)   &  (402.8971)   &  (357.8624)   &  (337.4892)   &  (478.0251)   \\
+Treat 2016 $\times$ &    69.43563   &    78.45637   &   -143.1275   &    34.54238   &   -1293.833** \\
+\quad Complete Relaxation &  (294.3043)   &    (295.91)   &  (262.6368)   &  (195.6737)   &  (658.0282)   \\
+
+\textbf{Housing} \\
+Treat 2014 $\times$ &   -5672.437***&   -5653.213***&   -5971.258***&   -4631.114***&   -6303.957***\\
+\quad 2014 Relaxation     &  (1231.858)   &  (1232.778)   &  (1303.879)   &  (816.9409)   &  (1707.142)   \\
+Treat 2016 $\times$ &   -1198.093   &   -1224.853   &   -1574.736   &    -151.627   &   -982.1025   \\
+\quad Complete Relaxation &   (2004.13)   &   (2011.74)   &  (2030.915)   &  (1401.312)   &  (2129.062)   \\
+
+\textbf{Daily Commodities} \\
+Treat 2014 $\times$ &   -1410.907   &   -1842.631   &   -2690.717   &   -1280.107   &   -3535.786   \\
+\quad 2014 Relaxation     &  (3315.184)   &  (3421.674)   &  (3513.325)   &  (3220.119)   &  (4766.298)   \\
+Treat 2016 $\times$ &    7645.431***&    7736.072***&    7295.492** &    6648.937** &    7177.809   \\
+\quad Complete Relaxation &  (2934.591)   &  (2917.581)   &  (2869.302)   &  (2664.773)   &  (5322.666)   \\
+
+\textbf{Medical Care} \\
+Treat 2014 $\times$ &    43.23137   &    21.85226   &   -336.7607   &     -212.27   &   -982.8685   \\
+\quad 2014 Relaxation     &  (992.0379)   &  (993.8108)   &  (1008.864)   &  (986.7745)   &  (910.8218)   \\
+Treat 2016 $\times$ &    560.8091   &     530.481   &    227.3915   &    617.1651   &   -665.7874   \\
+\quad Complete Relaxation &  (870.4266)   &  (865.9259)   &  (875.4245)   &  (688.0815)   &  (1334.284)   \\
+
+\textbf{Entertainment} \\
+Treat 2014 $\times$ &   -128.6525   &   -128.9433   &   -168.4815   &   -315.4794*  &    67.77828   \\
+\quad 2014 Relaxation     &  (197.5938)   &  (204.6967)   &  (200.8578)   &  (188.6201)   &  (268.1802)   \\
+Treat 2016 $\times$ &   -80.63033   &   -81.33755   &   -100.4277   &   -197.6691***&    205.6514   \\
+\quad Complete Relaxation &  (85.84794)   &   (86.0876)   &  (87.23456)   &   (60.9872)   &  (266.3254)   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline
+Observations        &       5674        &       5674         &       5674         &       12905         &        3963 \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Housing_Extension
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on Housing Expenses \\ (Extension)} \label{app:housing_extend}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+		&\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+		&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+\textbf{Housing}		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+Treat 2014 $\times$ &    2022.819***&    1908.093** &    2409.804***&    1669.357***&    836.4251   \\
+\quad 2012 Survey         &  (753.1622)   &  (769.4968)   &  (815.4642)   &  (478.0823)   &  (1048.125)   \\
+Treat 2014 $\times$ &   -2346.172   &   -2490.616   &   -2576.314   &   -3184.107***&    1119.303   \\
+\quad 2014 Survey         &  (1649.111)   &  (1660.154)   &  (1724.664)   &  (1107.518)   &  (1547.849)   \\
+Treat 2014 $\times$ &   -4666.667** &   -4609.734** &   -4688.758** &    -3713.91***&   -1315.679   \\
+\quad 2016 Survey         &  (2005.402)   &  (2028.201)   &  (2105.275)   &  (1138.572)   &  (2945.272)   \\
+Treat 2016 $\times$ &    1449.306** &    1448.725** &    1428.514** &    679.9335** &   -88.40828   \\
+\quad 2012 Survey         &  (644.6092)   &  (655.4022)   &   (682.072)   &  (272.7179)   &  (969.8138)   \\
+Treat 2016 $\times$ &     4473.38** &    4386.266** &    4408.345*  &    3567.225*  &    8258.243***\\
+\quad 2014 Survey         &  (2229.567)   &  (2230.969)   &  (2290.815)   &  (1893.731)   &  (2221.576)   \\
+Treat 2016 $\times$ &    102.4449   &    79.36669   &   -254.1314   &    733.3022   &    3204.665   \\
+\quad 2016 Survey         &  (2189.102)   &  (2201.384)   &  (2230.084)   &  (1376.913)   &  (3122.737)   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline
+Observations        &        5574   &        5574   &        5490   &       11395   &        3833   \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+% Psychological Outcomes of First-Born
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on \\ Mental Outcomes of the First-Born} \label{app:childmental}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+
+\textbf{A. Positive Feeling} \\
+\qquad \textbf{About Self} \\
+Treat 2014 $\times$ &    .0831346   &    .0721355   &    .0393354   &    .0344087   &   -.1024247   \\
+\quad 2014 Relaxation     &  (.2031081)   &  (.2020873)   &  (.2064804)   &  (.1884451)   &  (.2590567)   \\
+Treat 2016 $\times$ &    .1900086   &     .164313   &     .111114   &    .1302657   &   -.1810154   \\
+\quad Complete Relaxation &  (.1483507)   &  (.1477715)   &  (.1516419)   &  (.1190598)   &  (.2424069)   \\
+Observations        &         700   &         700   &         693   &        1474   &         415   \\
+
+\textbf{B. Happiness} \\
+Treat 2014 $\times$ &   -.0220327   &     -.00849   &    .0037605   &   -.0473912   &      .02807   \\
+\quad 2014 Relaxation     &  (.1451571)   &  (.1459208)   &  (.1474352)   &  (.1397764)   &   (.153524)   \\
+Treat 2016 $\times$ &    .3127409** &    .3200347** &    .3357227** &    .1725087   &    .2274037   \\
+\quad Complete Relaxation &  (.1401123)   &  (.1405725)   &  (.1455025)   &  (.1136246)   &  (.1951196)   \\
+Observations        &        1657   &        1657   &        1637   &        3475   &         999   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old and at least one child. All regressions include a full set of year of school dummies and control for the gender of the child. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Parents' Attention on First-Born
+\begin{table}
+\centering
+\caption{The Impacts of ``Two-Children" Policy on \\ Parents' Attention Towards the First-Born} \label{app:parentatt}
+\begin{threeparttable}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+	                &\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Urban}&\multicolumn{1}{c}{Full}&\multicolumn{1}{c}{Urban \& Small}\\
+		&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}&\multicolumn{1}{c}{Sample}\\
+\hline
+
+\textbf{A. Care about} \\
+\qquad \textbf{Child's Education} \\
+Treat 2014 $\times$ &   -.0940397   &   -.1124167   &   -.1154625   &   -.1719147*  &   -.2422731** \\
+\quad 2014 Relaxation     &  (.1032884)   &  (.1026566)   &    (.10426)   &  (.0979801)   &  (.1202728)   \\
+Treat 2016 $\times$ &    .0538589   &     .033903   &     .061099   &    .0034868   &   -.1579576   \\
+\quad Complete Relaxation &  (.0916478)   &  (.0921868)   &  (.0911715)   &  (.0735562)   &  (.1442526)   \\
+Observations        &        2551   &        2551   &        2517   &        5475   &        1604   \\
+
+\textbf{B. Communication between} \\
+\qquad \textbf{Parents and Child} \\
+Treat 2014 $\times$ &    .0302129   &    .0177657   &   -.0050066   &   -.0424308   &   -.1030144   \\
+\quad 2014 Relaxation     &  (.0996517)   &  (.0995019)   &  (.1004223)   &  (.0941314)   &  (.1145395)   \\
+Treat 2016 $\times$ &   -.0289224   &   -.0447744   &   -.0399399   &   -.0641959   &    -.190128   \\
+\quad Complete Relaxation &   (.086929)   &  (.0872334)   &  (.0863324)   &   (.068547)   &  (.1372145)   \\
+Observations        &        2531   &        2531   &        2498   &        5408   &        1599   \\
+\hline
+Province FE &  Y &  Y & Y & Y & Y \\
+Year FE &  Y &  Y & Y & Y & Y \\
+Cohort FE & N & Y & Y & Y & Y \\
+Co-variate Dummies: \\
+\quad Household \\
+\qquad Income Level & N & N & Y & Y & Y \\
+\quad Parents' Education &  N &  N & Y & Y & Y \\
+\quad Parents' Employment &  N &  N & Y & Y & Y \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}[para,flushleft]
+\footnotesize \textit{Source:} 2010, 2012, 2014, and 2016 China Family Panel Studies (CFPS). \\
+\textit{Notes:} All samples are restricted to households with the wife younger than 50 years old and at least one child. All regressions include a full set of year of school dummies and control for the gender of the child. A constant is included in all specifications. \\
+\quad \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\clearpage
+
+\section{Details on Coding Data Sets} \label{coding}
+\indent For variables shown in Table \ref{tab:sumstats2} that are relevant to this study, I will describe in detail how the variables are coded so that the means and standard errors can be better interpreted. \\
+\\
+\textbf{Adult Education Level} \\
+1 = ``illiterate", 2 = ``primary school", 3 = ``junior high school", \\ 4 = ``senior high school", 5 = ``some college", 6 = ``college or above" \\
+\textbf{Child Year of School} \\
+(Based on the reported grade level and school type \& ranged from 1-17) \\
+1 = ``first year in primary school", 7 = ``first year in junior high school", \\ 10 = ``first year in senior high school", 13 = ``first year in college", 17 = ``above college" \\
+\textbf{Child Class Percentile} \\
+1 = ``bottom 24\%", 2 = ``51-75\%", 3 = ``26-50\%", 4 = ``11-25\%", 5 = ``top 10\%" \\
+\textbf{Child Grade in Chinese/Math} \\
+(Equivalent to the letter grades in the US education system) \\
+1 = ``poor", 2 = ``average", 3 = ``good", 4 = ``excellent" \\ \textbf{Care About Child's Education} \\
+(Subjective score given by the interviewer based on his/her observation of the family) \\
+1 = ``very little", 2 = "little", 3 = "medium", 4 = "much", 5 = ``very much" \\
+\textbf{Communication Between Parents \& Child} \\
+(Subjective score given by the interviewer based on his/her observation of the family) \\
+1 = ``very little", 2 = "little", 3 = "medium", 4 = "much", 5 = ``very much" \\
+\textbf{Child's Positive Feeling about Self} \\
+(On a scale of 1-5) \\
+\textbf{Happiness} \\
+(On a sacle of 1-5)
+
+
+\clearpage
+
+\section{Details on Matching Data Sets} \label{matching}
+\indent Under the specific setup of the China Family Panel Studies (CFPS) survey, a large number of surveyed households have not only the parents, who are often the household head and spouse, and their children, but also grandparents and close relatives participate in the survey as well, as long as they reside together. Hence, while I can match together the adult and child data sets that belong to the same family via directly matching the family IDs, a more difficult problem is to match husbands and wives, and to identify parents specifically with their own offspring. \\
+\indent In particular, in the 2010 wave of survey, adults report the personal IDs of all their children. Hence, I use this information to match back to the child, determining fathers and mothers by gender separately. In this way, parents are matched automatically as long as they are still married. In the 2012 wave of survey, adults do not report information about their children in the adult data set anymore. Instead, child data set reports father's and mother's personal IDs. Using the same strategy, I match each child with his/her father and mother independently, which again automatically matches parents together. In the 2014 and 2016 waves of survey, in addition to father's and mother's personal IDs being both reported in the child data set, spouse's personal ID is also reported in the adult data set. Hence, I first match couples using spouse's personal ID, and then match parents with their children if the couples already gave birth to at least one child. In this way, more observations can be kept for the parts of the analysis not considering outcomes of the first-born, namely, analyses on household expenditures and savings and female labor supply. \\
+\indent I then assign the oldest child in each family to be the first-born. After cleaning and matching the data, I am able to identify each observation in the matched data set for each wave of survey with the personal IDs of the husband and the wife, who may or may not be father and mother yet. Each observation should then contain information on household expenditures and savings, household income, provincial code of residence, whether household lives in urban area, current number of children in the family, survey year and month, and age, highest education level, employment status, personal income, and most importantly, number of siblings of the husband and the wife, and other relevant household and couple's characteristics. For families that already have at least one child, each observation should also contain information about the first-born, including gender, age, year of school, variables measuring education and mental outcomes, education and medical expenditures paid by parents, and other relevant personal characteristics.
+
+\end{document}
